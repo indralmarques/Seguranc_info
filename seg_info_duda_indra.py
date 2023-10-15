@@ -49,18 +49,22 @@ for i in range (len(frase_enunciado)):
     md5_real.append(MD5)
 
     if (sha_256_enunciado[i] == sha_256_real[i] and md5_enunciado[i] == md5_real[i]):
-        print("\"" +frase_enunciado[i] + "\"")
-        print("SHA256 e MD5 corretos - " + SHA256 + " - " + MD5)
-    
+        print("\"" +frase_enunciado[i] + "\"" + "\n")
+        print("SHA256 e MD5 corretos - " + SHA256 + " - " + MD5 + "\n")
+        print("-----------------------------------------------------------------------------------------------------------------------------\n")
+
 
     elif (sha_256_enunciado[i] == sha_256_real[i] and md5_enunciado[i] != md5_real[i]):
-        print("\"" +frase_enunciado[i]  + "\"")
-        print("Somente SHA256 correto - " + SHA256 + " - " + MD5)
+        print("\"" +frase_enunciado[i]  + "\"" + "\n")
+        print("Somente SHA256 correto - " + SHA256 + " - " + MD5 + "\n")
+        print("-----------------------------------------------------------------------------------------------------------------------------\n")
 
     elif (sha_256_enunciado[i] != sha_256_real[i] and md5_enunciado[i] == md5_real[i]):
-        print("\"" +frase_enunciado[i] + "\"")
-        print("Somente MD5 correto - " + SHA256 + " - " + MD5)
+        print("\"" +frase_enunciado[i] + "\"" + "\n")
+        print("Somente MD5 correto - " + SHA256 + " - " + MD5 + "\n")
+        print("-----------------------------------------------------------------------------------------------------------------------------\n")
 
     else:
-        print("\"" +frase_enunciado[i])
-        print("Nenhum dos dois corretos - " + SHA256 + " - " + MD5)
+        print("\"" +frase_enunciado[i] + "\n")
+        print("Nenhum dos dois corretos - " + SHA256 + " - " + MD5 + "\n")
+        print("-----------------------------------------------------------------------------------------------------------------------------\n")
